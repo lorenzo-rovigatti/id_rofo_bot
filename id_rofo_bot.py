@@ -52,7 +52,7 @@ def handle_message(update: Update, context: CallbackContext) -> None:
 
 def main() -> None:
     with open("token") as f:
-        TOKEN = f.readline()
+        TOKEN = f.readline().strip()
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
     updater = Updater(TOKEN)
