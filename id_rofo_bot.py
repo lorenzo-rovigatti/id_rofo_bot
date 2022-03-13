@@ -46,7 +46,7 @@ def help_command(update: Update, context: CallbackContext) -> None:
 def handle_message(update: Update, context: CallbackContext) -> None:
     """Echo the user message."""
     if "francesco" in update.message.text.lower():
-        update.message.reply_text("Francesco chi?")
+        update.message.reply_text("Francesco chi?", quote=True)
 
 
 def main() -> None:
