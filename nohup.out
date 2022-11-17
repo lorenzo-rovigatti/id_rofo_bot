@@ -1,0 +1,1562 @@
+2022-03-13 23:37:16,741 - apscheduler.scheduler - INFO - Scheduler started
+2022-03-13 23:39:53,880 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2022-03-13 23:39:53,880 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2022-03-13 23:39:55,175 - telegram.ext.updater - WARNING - Exiting immediately!
+2022-03-13 23:42:33,757 - apscheduler.scheduler - INFO - Scheduler started
+2022-03-15 02:10:17,772 - telegram.ext.updater - ERROR - Error while getting Updates: Bad Gateway
+2022-03-15 02:10:17,773 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 290, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+2022-03-15 02:10:18,812 - telegram.ext.updater - ERROR - Error while getting Updates: Bad Gateway
+2022-03-15 02:10:18,813 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 290, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+2022-03-18 23:57:03,999 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2022-03-18 23:57:03,999 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2022-03-24 10:35:48,221 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8c40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:48,222 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8d60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:48,227 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8eb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:48,228 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390363f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:48,228 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390363f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390363f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390363f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:49,231 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390347ee0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:49,232 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390347d60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:49,232 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:49,232 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8c10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:49,233 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8c10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8c10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8c10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:50,739 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb390363a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:50,740 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8850>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:50,740 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8340>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:50,740 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:50,741 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:53,000 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8c10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:53,000 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8f40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:53,001 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd100>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:53,001 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:53,001 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:56,377 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:56,378 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd400>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:56,378 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:35:56,378 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd6a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:35:56,379 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd6a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd6a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd6a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:01,467 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:01,467 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd850>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:01,468 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd9a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:01,468 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8ddaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:01,468 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8ddaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8ddaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8ddaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:09,100 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd1f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:09,101 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8ddd30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:09,101 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dde80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:09,102 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8e8040>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:09,102 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8e8040>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8e8040>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8e8040>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:20,550 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd700>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:20,551 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd5b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:20,551 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd040>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:20,551 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:20,551 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:37,724 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38c8dd670>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:37,724 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8fa0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:37,724 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac8af0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-03-24 10:36:37,725 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac85b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 10:36:37,725 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac85b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac85b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fb38cac85b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-03-24 15:00:36,023 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "id_rofo_bot.py", line 48, in handle_message
+    if "francesco" in update.message.text.lower():
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-03-26 02:10:30,010 - telegram.ext.updater - ERROR - Error while getting Updates: Bad Gateway
+2022-03-26 02:10:30,011 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 290, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+2022-03-26 02:10:31,050 - telegram.ext.updater - ERROR - Error while getting Updates: Bad Gateway
+2022-03-26 02:10:31,050 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 290, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+2022-03-26 02:10:32,589 - telegram.ext.updater - ERROR - Error while getting Updates: Bad Gateway
+2022-03-26 02:10:32,589 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 290, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+2022-03-26 02:10:34,885 - telegram.ext.updater - ERROR - Error while getting Updates: Bad Gateway
+2022-03-26 02:10:34,886 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 290, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+2022-03-30 11:25:11,081 - telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+2022-03-30 11:25:11,081 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2022-04-01 15:01:08,989 - apscheduler.scheduler - INFO - Scheduler started
+2022-04-01 18:48:10,309 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:10,309 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a5e0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:10,310 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a730>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:10,310 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a880>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:10,310 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a880>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a880>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a880>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:11,316 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7ab50>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:11,316 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7ad30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:11,316 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7ae80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:11,317 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7afd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:11,317 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7afd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7afd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7afd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:12,825 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a9a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:12,826 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a1c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:12,826 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:12,827 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:12,827 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:15,089 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a070>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:15,089 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:15,090 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a760>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:15,090 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a8b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:15,090 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a8b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a8b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a8b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:18,483 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:18,484 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014aa60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:18,485 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a940>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:18,485 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7aeb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:18,485 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7aeb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7aeb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7aeb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:23,574 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7ac40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:23,575 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a7c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:23,575 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a5e0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:23,575 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:23,576 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:31,208 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7a820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:31,208 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a66df0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:31,216 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a66f10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:31,217 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a910>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:31,217 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a910>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a910>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a910>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:42,665 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f9002a7af40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:42,666 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:42,666 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a2e0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 18:48:42,667 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014aaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:48:42,667 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014aaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014aaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014aaf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2022-04-01 18:49:19,874 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7f900014a910>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /bot5234481972:AAHHc779w5r4AQW87dLs4xW45vq3Uaunxh4/getUpdates
+2022-04-01 23:13:52,384 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2022-04-01 23:13:52,384 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/ext/extbot.py", line 224, in get_updates
+    updates = super().get_updates(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 3054, in get_updates
+    self._post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/home/lorenzo/.local/lib/python3.8/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2022-04-05 11:33:36,849 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2022-04-05 11:33:36,852 - apscheduler.scheduler - INFO - Scheduler has been shut down

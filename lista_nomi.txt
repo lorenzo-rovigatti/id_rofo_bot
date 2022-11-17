@@ -1,0 +1,16 @@
+John,Russo,John,john.russo@uniroma1.it
+Lorenzo,Rovigatti,Lorenzo,lorenzo.rovigatti@uniroma1.it
+Francesco,Sciortino,FS,
+Cristiano,De Michele, Cristiano,
+Nicoletta,Gnan,Nicoletta,
+Emanuela,Zaccarelli,Emanuela,
+Fabio,Leoni,Fabio,
+Diogo,Pinto,Diogo,
+Francesco,Guidarelli Mattioli,Francesco Jr.,
+Camilla,Beneduce,Camilla,
+Rodrigo,Rivas Barbosa,Rodrigo,
+Francesco,Tosti Guerra,Francesco TG,
+Letizia,Tavagnacco,Letizia,
+Giovanni,Del Monte,Giovanni,
+Francesco,Brasili,Francesco Brasili,
+Silvia,Franco,Silvia Franco,
